@@ -2,6 +2,33 @@ var stack = [];
 var point =0;
 var obrac = 0;
 var cbrac =0;
+let touchstartX = 0;
+let touchstartY = 0;
+let touchendX = 0;
+let touchendY = 0;
+
+const gestureZone = document.querySelector(".keyboard");
+
+gestureZone.addEventListener('touchstart', function(event) {
+    touchstartX = event.changedTouches[0].screenX;
+    touchstartY = event.changedTouches[0].screenY;
+}, false);
+
+gestureZone.addEventListener('touchend', function(event) {
+    touchendX = event.changedTouches[0].screenX;
+    touchendY = event.changedTouches[0].screenY;
+    handleGesture();
+}, false); 
+
+function handleGesture() {
+    if (touchendX <= touchstartX) {
+        document.querySelector(".functionKeys").classList.remove("swipeRight");
+    }
+    
+    if (touchendX >= touchstartX) {
+        document.querySelector(".functionKeys").classList.add("swipeRight");
+    }
+}
 var display = function(){
 var ans = evaluate();
     if(!isNaN(ans)){

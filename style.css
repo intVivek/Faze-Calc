@@ -27,6 +27,7 @@ body{
     font-size: 50px;
     font-family: 'Abel', sans-serif;
     outline : none;
+    background-color: white;
 }
 .input .display2 {
     width : 100%;
@@ -37,6 +38,7 @@ body{
     color : rgb(133, 133, 133);
     font-family: 'Abel', sans-serif;
     outline : none;
+    background-color: white;
 }
 
 .keyboard {
@@ -46,6 +48,7 @@ body{
 .faze{
     background-color : rgb(70, 70, 70);
     outline : none;
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
 }
 .functionKeys {
     width: var(--functionkeys-width);
@@ -65,6 +68,7 @@ body{
     border : 0px;
     cursor: pointer;
     outline : none;
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
 
 }.function:hover {
     color: rgb(255, 255, 255);;
@@ -99,6 +103,7 @@ body{
     border : 0px;
     cursor: pointer;
     outline : none;
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
 }
 
 .numButton:hover {
@@ -131,6 +136,7 @@ body{
     border : 0px;
     cursor: pointer;
     outline : none;
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
 }
 .operator:hover {
     color: rgb(255, 198, 74);;
@@ -161,7 +167,7 @@ body{
         height : calc(100% - var(--display-height));
         transition: 0.5s ease-in;
     }
-    .functionKeys:hover {
+    .swipeRight {
         left: 0%;
         transition: 0.5s ease-out;
     }
