@@ -25,11 +25,11 @@ gestureZone.addEventListener('touchend', function(event) {
 }, false); 
 
 function handleGesture() {
-    if (Math.abs(touchendX - touchstartX) > 20) {
+    if (touchstartX - touchendtX > 75) {
         document.querySelector(".functionKeys").classList.remove("swipeRight");
     }
     
-    if (Math.abs(touchendX - touchstartX) > 200) {
+    if (touchendX - touchstartX > 75) {
         document.querySelector(".functionKeys").classList.add("swipeRight");
     }
 }
