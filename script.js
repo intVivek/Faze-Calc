@@ -11,21 +11,25 @@ const gestureZone = document.querySelector(".keyboard");
 
 gestureZone.addEventListener('touchstart', function(event) {
     touchstartX = event.changedTouches[0].screenX;
+    console.log(touchstartX);
     touchstartY = event.changedTouches[0].screenY;
+    console.log(touchstartY);
 }, false);
 
 gestureZone.addEventListener('touchend', function(event) {
     touchendX = event.changedTouches[0].screenX;
+    console.log(touchendX);
     touchendY = event.changedTouches[0].screenY;
+    console.log(touchendY);
     handleGesture();
 }, false); 
 
 function handleGesture() {
-    if (touchendX <= touchstartX) {
+    if (Math.abs(touchendX - touchstartX) > 20) {
         document.querySelector(".functionKeys").classList.remove("swipeRight");
     }
     
-    if (touchendX >= touchstartX) {
+    if (Math.abs(touchendX - touchstartX) > 200) {
         document.querySelector(".functionKeys").classList.add("swipeRight");
     }
 }
