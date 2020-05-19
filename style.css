@@ -29,10 +29,6 @@ body{
     font-family: 'Abel', sans-serif;
     outline : none;
     background-color: white;
-    white-space: nowrap;                   
-    overflow: hidden;
-    text-overflow: ellipsis;  
-    direction: rtl;
 }
 .input .display2 {
     width : 100%;
@@ -44,10 +40,6 @@ body{
     font-family: 'Abel', sans-serif;
     outline : none;
     background-color: white;
-    white-space: nowrap;                   
-    overflow: hidden;
-    text-overflow: ellipsis;  
-    direction: rtl;
 }
 
 .keyboard {
