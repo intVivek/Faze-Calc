@@ -25,11 +25,11 @@ gestureZone.addEventListener('touchend', function(event) {
 }, false); 
 
 function handleGesture() {
-    if (touchstartX - touchendX > 75) {
+    if ((touchstartX - touchendX > 75)) {
         document.querySelector(".functionKeys").classList.remove("swipeRight");
     }
     
-    if (touchendX - touchstartX > 75) {
+    if ((touchendX - touchstartX > 75)&&touchstartX<75) {
         document.querySelector(".functionKeys").classList.add("swipeRight");
     }
 }
@@ -231,6 +231,7 @@ display();
     
 });
 document.querySelector("#equalto").addEventListener("click", function() {
+    ans = evaluate();
     if(!isNaN(ans)){
         document.querySelector("#display1").value=ans;
         document.querySelector("#display2").value="";
