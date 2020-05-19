@@ -25,7 +25,7 @@ gestureZone.addEventListener('touchend', function(event) {
 }, false); 
 
 function handleGesture() {
-    if (touchstartX - touchendtX > 75) {
+    if (touchstartX - touchendX > 75) {
         document.querySelector(".functionKeys").classList.remove("swipeRight");
     }
     
