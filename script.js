@@ -330,7 +330,25 @@ document.querySelector("#Ln").addEventListener("click", function() {
 });
 
 document.addEventListener('keyup', function (e) {
+	// Number Keys
 	if (parseInt(e.key) >= 0 && parseInt(e.key) <= 9) {
 		document.querySelector(`#num${e.key}`).click();
+	}
+
+	// Operator Keys
+	if (e.key === '/') {
+		document.querySelector('#operator1').click();
+	}
+	if (e.key === '*') {
+		document.querySelector('#operator2').click();
+	}
+	if (e.key === '-') {
+		document.querySelector('#operator3').click();
+	}
+	if (e.key === '+') {
+		document.querySelector('#operator4').click();
+	}
+	if (e.key === 'Backspace') {
+		document.querySelector('#back').click();
 	}
 });
