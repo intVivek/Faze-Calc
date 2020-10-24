@@ -351,4 +351,12 @@ document.addEventListener('keyup', function (e) {
 	if (e.key === 'Backspace') {
 		document.querySelector('#back').click();
 	}
+
+	// Other Keys
+	if (e.key === '.') {
+		document.querySelector('#point').click();
+	}
+	if (e.key === '=' || e.key === 'Enter') {
+		document.querySelector('#equalto').click();
+	}
 });
