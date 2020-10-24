@@ -329,13 +329,16 @@ document.querySelector("#Ln").addEventListener("click", function() {
     point=0;
 });
 
-document.addEventListener('keyup', function (e) {
+document.addEventListener('keydown', function (e) {
 	// Number Keys
 	if (parseInt(e.key) >= 0 && parseInt(e.key) <= 9) {
 		document.querySelector(`#num${e.key}`).click();
 	}
 
 	// Operator Keys
+	if (e.key === '^') {
+		document.querySelector('#operator0').click();
+	}
 	if (e.key === '/') {
 		document.querySelector('#operator1').click();
 	}
@@ -347,6 +350,21 @@ document.addEventListener('keyup', function (e) {
 	}
 	if (e.key === '+') {
 		document.querySelector('#operator4').click();
+	}
+	if (e.key === '!') {
+		document.querySelector('#operator5').click();
+	}
+	if (e.key === '%') {
+		document.querySelector('#operator6').click();
+	}
+	if (e.key === 'e') {
+		document.querySelector('#e').click();
+	}
+	if (e.key === '(') {
+		document.querySelector('#obracket').click();
+	}
+	if (e.key === ')') {
+		document.querySelector('#cbracket').click();
 	}
 	if (e.key === 'Backspace') {
 		document.querySelector('#back').click();
