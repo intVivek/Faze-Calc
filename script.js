@@ -328,3 +328,9 @@ document.querySelector("#Ln").addEventListener("click", function() {
     obrac++;
     point=0;
 });
+
+document.addEventListener('keyup', function (e) {
+	if (parseInt(e.key) >= 0 && parseInt(e.key) <= 9) {
+		document.querySelector(`#num${e.key}`).click();
+	}
+});
